@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Coach.cs" />
     <Compile Include="Club.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Sponsers.cs" />

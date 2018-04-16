@@ -9,25 +9,29 @@ namespace SFS
     class Employee : Person
     {
         int working_year;
-        int Employment_date;
-        bool status;
+        string Employment_date;
+        string status;
         string department;
+        string password;
 
 
         public Employee()
         {
             working_year = 0;
-            Employment_date = 0;
-            status = false;
+            Employment_date = "";
+            status = "Available";
             department = "";
+            password = "";
             
         }
-        public Employee(int n,int x,bool y,string z, string a, int d, string g, int i, bool m, float s, float b) :base(a,d,g,i,m,s,b)
+        public Employee(string namee, string date, string genderr, string ID, string medical, float sal, float bon, string mob,int workyear,string empdate, string statue, string dep,string pass) :base(namee,date,genderr,ID,medical,sal,bon,mob)
         {
-            working_year = n;
-            Employment_date = x;
-            status = y;
-            department = z;
+            
+            Employment_date = empdate;
+            status = statue;
+            department = dep;
+            working_year = workyear;
+            password = pass;
         }
         public void setWorking_Year(int working_year)
         {
@@ -39,21 +43,21 @@ namespace SFS
             return this.working_year;
 
         }
-        public void setEmployment_date(int Employment_date)
+        public void setEmployment_date(string Employment_date)
         {
             this.Employment_date = Employment_date;
 
         }
-        public int getEmployment_date()
+        public string getEmployment_date()
         {
             return this.Employment_date;
         }
-        public void setStatus(bool status)
+        public void setStatus(string status)
         {
 
             this.status = status;
         }
-        public bool GetStatus()
+        public string GetStatus()
         {
             return this.status;
 
@@ -66,15 +70,22 @@ namespace SFS
         {
             return this.department;
         }
-        public int Working_year_calc( int  working_year)
+        public void setpassword(string pass)
+        {
+            this.password = pass;
+        }
+        public string Getpassword()
+        {
+            return this.password;
+        }
+        
+        public int Working_year_calc()
         {
             int current_year = 2018;
             int years;
             years= current_year - working_year;
             return years;
-
         }
-  
-      
+ 
     }
 }

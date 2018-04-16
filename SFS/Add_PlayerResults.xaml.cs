@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Xml;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Drawing;
+using System.Data;
+
+namespace SFS
+{
+    /// <summary>
+    /// Interaction logic for Add_PlayerResults.xaml
+    /// </summary>
+    public partial class Add_PlayerResults : Window
+    {
+        public Add_PlayerResults()
+        {
+            InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            if (type.Text == "" || result.Text == "")
+            {
+                MessageBox.Show("Please fill the required information !");
+            }
+          
+          
+             if (!File.Exists("Results.xml"))
+            {
+                XmlTextWriter document = new XmlTextWriter("Results.xml", Encoding.UTF8);
+
+                document.Formatting = Formatting.Indented;
+                document.WriteStartDocument();
+                document.WriteStartElement("Results");
+                document.WriteStartElement("Result");
+
+                document.WriteStartElement("Player_ID");
+                document.WriteString(Enter_ID.playerid);
+                document.WriteEndElement();
+
+                document.WriteStartElement("Championship_Type");
+                document.WriteString(type.Text);
+                document.WriteEndElement();
+
+                document.WriteStartElement("Championship_Place");
+                document.WriteString(place.Text);
+                document.WriteEndElement();
+
+                document.WriteStartElement("Results");
+                document.WriteString(result.Text);
+                document.WriteEndElement();
+
+
+
+                document.WriteEndElement();
+                document.WriteEndElement();
+                document.WriteEndDocument();
+
+                document.Close();
+
+                MessageBox.Show("Player Results Successfuly added.");
+
+            }
+            else
+
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load("Results.xml");
+
+                XmlNode resultt = doc.CreateElement("Result");
+
+                XmlNode typee = doc.CreateElement("Championship_Type");
+                typee.InnerText = type.Text;
+                resultt.AppendChild(typee);
+
+                XmlNode placee = doc.CreateElement("Championship_Place");
+                placee.InnerText = place.Text;
+                resultt.AppendChild(placee);
+
+                XmlNode res = doc.CreateElement("Results");
+                res.InnerText = result.Text;
+                resultt.AppendChild(res);
+
+                doc.DocumentElement.AppendChild(resultt);
+                doc.Save("Results.xml");
+
+                MessageBox.Show("Team Successfuly added.");
+            }
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            Edit_Player pp = new Edit_Player();
+            pp.Show();
+            this.Hide();
+        }
+    }
+}

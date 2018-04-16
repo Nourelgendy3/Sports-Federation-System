@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Clubs>
+  <Club>
+    <Club_Name>Heliopolis</Club_Name>
+    <Starting_Date>1/6/2006</Starting_Date>
+    <Club_Teams>0</Club_Teams>
+    <Club_Championships>0</Club_Championships>
+    <Club_Sponsors>0</Club_Sponsors>
+  </Club>
+  <Club>
+    <Club_Name>el ahly</Club_Name>
+    <starting_Date>4/15/2018</starting_Date>
+    <Club_Teams>0</Club_Teams>
+    <Club_Championships>0</Club_Championships>
+    <Club_Sponsors>0</Club_Sponsors>
+  </Club>
+  <Club>
+    <Club_Name>Ahly</Club_Name>
+    <starting_Date>4/5/1990</starting_Date>
+    <Club_Teams>0</Club_Teams>
+    <Club_Championships>0</Club_Championships>
+    <Club_Sponsors>0</Club_Sponsors>
+  </Club>
+  <Club>
+    <Club_Name>Al mekawleen</Club_Name>
+    <starting_Date>12/27/1915</starting_Date>
+    <Club_Teams>0</Club_Teams>
+    <Club_Championships>0</Club_Championships>
+    <Club_Sponsors>0</Club_Sponsors>
+  </Club>
+</Clubs>

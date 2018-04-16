@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Championships>
+  <Championship>
+    <Type_of_Championship>Offical</Type_of_Championship>
+    <Place_of_Championship>Cairo</Place_of_Championship>
+    <Senior>Yes</Senior>
+    <Results>0</Results>
+  </Championship>
+  <Championships>
+    <Type_of_Championship>Not official</Type_of_Championship>
+    <Place_of_Championship>Alex</Place_of_Championship>
+    <Senior>Yes</Senior>
+    <Results>0</Results>
+  </Championships>
+  <Championships>
+    <Type_of_Championship>Official</Type_of_Championship>
+    <Place_of_Championship>cairo stadium</Place_of_Championship>
+    <Senior>Yes</Senior>
+    <Results>0</Results>
+  </Championships>
+</Championships>

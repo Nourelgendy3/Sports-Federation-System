@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Teams>
+  <Team>
+    <Team_Name>Shams</Team_Name>
+    <Senior>Yes</Senior>
+    <Results>0</Results>
+  </Team>
+  <Team>
+    <Team_Name>Hawhaw</Team_Name>
+    <Senior>Yes</Senior>
+    <Results>0</Results>
+  </Team>
+  <Team>
+    <Team_Name>Boys</Team_Name>
+    <Senior>No</Senior>
+    <Results>0</Results>
+  </Team>
+</Teams>

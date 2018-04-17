@@ -32,72 +32,103 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            string coachname="";
+            int x = int.Parse(result.Text);
             if (type.Text == "" || result.Text == "")
             {
                 MessageBox.Show("Please fill the required information !");
             }
-          
-          
-             if (!File.Exists("Results.xml"))
-            {
-                XmlTextWriter document = new XmlTextWriter("Results.xml", Encoding.UTF8);
-
-                document.Formatting = Formatting.Indented;
-                document.WriteStartDocument();
-                document.WriteStartElement("Results");
-                document.WriteStartElement("Result");
-
-                document.WriteStartElement("Player_ID");
-                document.WriteString(Enter_ID.playerid);
-                document.WriteEndElement();
-
-                document.WriteStartElement("Championship_Type");
-                document.WriteString(type.Text);
-                document.WriteEndElement();
-
-                document.WriteStartElement("Championship_Place");
-                document.WriteString(place.Text);
-                document.WriteEndElement();
-
-                document.WriteStartElement("Results");
-                document.WriteString(result.Text);
-                document.WriteEndElement();
-
-
-
-                document.WriteEndElement();
-                document.WriteEndElement();
-                document.WriteEndDocument();
-
-                document.Close();
-
-                MessageBox.Show("Player Results Successfuly added.");
-
-            }
             else
-
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load("Results.xml");
+                for (int i = 0; i < Containers.Player_list.Count; i++)
+                {
+                    if (Containers.Player_list[i].getId().ToString() == Enter_ID.playerid)
+                    {
+                        coachname = Containers.Player_list[i].get_CoachName();
+                    }
 
-                XmlNode resultt = doc.CreateElement("Result");
+                }
+                for(int i=0;i<Containers.Coach_list.Count;i++)
+                {
+                    if(Containers.Coach_list[i].getName()==coachname)
+                    {
+                        Containers.Coach_list[i].setResult(Containers.Coach_list[i].getResult() + x);
+                        break;
+                    }
+                }
+               
+                if (File.Exists("Coaches.xml"))
+                {
+                    File.Delete("Coaches.xml");
+                }
 
-                XmlNode typee = doc.CreateElement("Championship_Type");
-                typee.InnerText = type.Text;
-                resultt.AppendChild(typee);
+                for (int i = 0; i < Containers.Coach_list.Count; i++)
+                {
+                    Containers.write_coach(Containers.Coach_list[i]);
 
-                XmlNode placee = doc.CreateElement("Championship_Place");
-                placee.InnerText = place.Text;
-                resultt.AppendChild(placee);
+                }
 
-                XmlNode res = doc.CreateElement("Results");
-                res.InnerText = result.Text;
-                resultt.AppendChild(res);
+                if (!File.Exists("Results.xml"))
+                {
+                    XmlTextWriter document = new XmlTextWriter("Results.xml", Encoding.UTF8);
 
-                doc.DocumentElement.AppendChild(resultt);
-                doc.Save("Results.xml");
+                    document.Formatting = Formatting.Indented;
+                    document.WriteStartDocument();
+                    document.WriteStartElement("Results");
+                    document.WriteStartElement("Result");
 
-                MessageBox.Show("Team Successfuly added.");
+                    document.WriteStartElement("Player_ID");
+                    document.WriteString(Enter_ID.playerid);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Championship_Type");
+                    document.WriteString(type.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Championship_Place");
+                    document.WriteString(place.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Results");
+                    document.WriteString(result.Text);
+                    document.WriteEndElement();
+
+
+
+                    document.WriteEndElement();
+                    document.WriteEndElement();
+                    document.WriteEndDocument();
+
+                    document.Close();
+
+                    MessageBox.Show("Player Results Successfuly added.");
+
+                }
+                else
+
+                {
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load("Results.xml");
+
+                    XmlNode resultt = doc.CreateElement("Result");
+
+                    XmlNode typee = doc.CreateElement("Championship_Type");
+                    typee.InnerText = type.Text;
+                    resultt.AppendChild(typee);
+
+                    XmlNode placee = doc.CreateElement("Championship_Place");
+                    placee.InnerText = place.Text;
+                    resultt.AppendChild(placee);
+
+                    XmlNode res = doc.CreateElement("Results");
+                    res.InnerText = result.Text;
+                    resultt.AppendChild(res);
+
+                    doc.DocumentElement.AppendChild(resultt);
+                    doc.Save("Results.xml");
+
+                    MessageBox.Show("Team Successfuly added.");
+                }
             }
         }
 

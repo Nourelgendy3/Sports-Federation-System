@@ -37,7 +37,6 @@
             <ComboBoxItem>JUNIOR</ComboBoxItem>
             <ComboBoxItem>SENIOR</ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="28,23,0,0"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="100" Margin="148,119,0,0" Grid.RowSpan="2"/>
         <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="100" Margin="247,119,0,0" Grid.RowSpan="2"/>
     </Grid>

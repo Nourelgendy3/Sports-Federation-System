@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Coaches>
+  <Coach>
+    <Coach_Name>Mai</Coach_Name>
+    <Coach_ID>Ma01</Coach_ID>
+    <Mobile_Number>01000101001010</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>Female</Medical_Form>
+    <Salary>22121</Salary>
+    <Bonus>0</Bonus>
+    <Employement_Date>3/28/2018</Employement_Date>
+    <Working_Years>0</Working_Years>
+    <Date_of_birth>3/27/2018</Date_of_birth>
+    <Available>Yes</Available>
+    <Department>Coach</Department>
+    <Results>71</Results>
+    <Password>123123</Password>
+  </Coach>
+</Coaches>

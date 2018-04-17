@@ -4,4 +4,29 @@
     <Championship_Type>Cairo</Championship_Type>
     <Results>10</Results>
   </Result>
+  <Result>
+    <Championship_Type>Official</Championship_Type>
+    <Championship_Place>cairo</Championship_Place>
+    <Results>20</Results>
+  </Result>
+  <Result>
+    <Championship_Type>official</Championship_Type>
+    <Championship_Place>cairo</Championship_Place>
+    <Results>20</Results>
+  </Result>
+  <Result>
+    <Championship_Type>Official</Championship_Type>
+    <Championship_Place>cairo</Championship_Place>
+    <Results>2000</Results>
+  </Result>
+  <Result>
+    <Championship_Type>official</Championship_Type>
+    <Championship_Place>Alex</Championship_Place>
+    <Results>400</Results>
+  </Result>
+  <Result>
+    <Championship_Type>Not  official</Championship_Type>
+    <Championship_Place>sharm</Championship_Place>
+    <Results>900</Results>
+  </Result>
 </Results>

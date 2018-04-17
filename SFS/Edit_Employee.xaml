@@ -18,7 +18,7 @@
         </ComboBox>
         <Button x:Name="button1_Copy2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="421,271,0,0" Click="button1_Click" Height="48" BorderThickness="0">
             <Button.Background>
-                <ImageBrush ImageSource="next1.png"/>
+                <ImageBrush ImageSource="next.png"/>
             </Button.Background>
         </Button>
         <Label x:Name="label2_Copy11" Content="Change:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold" Foreground="#FF34A5B0">
@@ -28,7 +28,7 @@
         </Label>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Height="50" Margin="0,272,0,-2" Click="button_Click">
             <Button.Background>
-                <ImageBrush ImageSource="back1.png"/>
+                <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
 

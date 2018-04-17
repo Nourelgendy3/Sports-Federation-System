@@ -62,7 +62,7 @@ namespace SFS
               }
             List<int> tage = new List<int>();
             List<string> tname = new List<string>();
-            if (age1.Text == "Senior")
+            if (age1.Text == "SENIOR")
             {
 
                 for (int i = 0; i < seniors.Count; i++)

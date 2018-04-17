@@ -12,7 +12,7 @@
         </Grid.Background>
         <Label x:Name="label" Content="Enter Department Name" HorizontalAlignment="Left" Height="46" Margin="10,97,0,0" VerticalAlignment="Top" Width="183" FontSize="22"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="36" Margin="10,161,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="170" FontSize="16"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="103" Margin="378,216,0,0" VerticalAlignment="Top" Width="114" BorderThickness="0" Click="button_Click">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="87" Margin="380,232,0,0" VerticalAlignment="Top" Width="112" BorderThickness="0" Click="button_Click">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
@@ -25,7 +25,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\Dell\Documents\GitHub\New folder\Sports-Federation-System\SFS\images/bk.png"/>
+                <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
 

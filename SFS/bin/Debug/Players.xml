@@ -24,4 +24,64 @@
     <Team_Name>haha</Team_Name>
     <Coach_Name>ha</Coach_Name>
   </Player>
+  <Player>
+    <Player_Name>Lara</Player_Name>
+    <Player_ID>La10</Player_ID>
+    <Mobile_Number>01028</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>0</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>2/2/2010</Date_oF_birth>
+    <Team_Name>Heliopolis</Team_Name>
+    <Coach_Name>Mai</Coach_Name>
+  </Player>
+  <Player>
+    <Player_Name>Nour</Player_Name>
+    <Player_ID>No99</Player_ID>
+    <Mobile_Number>012839103721</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>0</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>6/21/1990</Date_oF_birth>
+    <Team_Name>Petro Sport</Team_Name>
+    <Coach_Name>Mai</Coach_Name>
+  </Player>
+  <Player>
+    <Player_Name>Khaled</Player_Name>
+    <Player_ID>Kh20</Player_ID>
+    <Mobile_Number>01173029123</Mobile_Number>
+    <Gender>Male</Gender>
+    <Medical_Form>NO</Medical_Form>
+    <Salary>0</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>10/27/2004</Date_oF_birth>
+    <Team_Name>Heliopolis</Team_Name>
+    <Coach_Name>Mai</Coach_Name>
+  </Player>
+  <Player>
+    <Player_Name>Salwa</Player_Name>
+    <Player_ID>Sa99</Player_ID>
+    <Mobile_Number>01116381923</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>NO</Medical_Form>
+    <Salary>0</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>5/22/1995</Date_oF_birth>
+    <Team_Name>Heliolido</Team_Name>
+    <Coach_Name>Mai</Coach_Name>
+  </Player>
+  <Player>
+    <Player_Name>Maria</Player_Name>
+    <Player_ID>Ma02</Player_ID>
+    <Mobile_Number>01132710362</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>2000</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>8/9/2002</Date_oF_birth>
+    <Team_Name>nasr city</Team_Name>
+    <Coach_Name>Mai</Coach_Name>
+  </Player>
 </Players>

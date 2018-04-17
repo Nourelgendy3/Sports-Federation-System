@@ -49,5 +49,12 @@ namespace SFS
             lgn.Show();
             this.Close();
         }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            mainqueryform m = new mainqueryform();
+            m.Show();
+            this.Close();
+        }
     }
 }

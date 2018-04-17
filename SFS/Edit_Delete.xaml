@@ -19,10 +19,10 @@
         </ComboBox>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Height="69" Margin="1,322,0,0" Click="button_Click">
             <Button.Background>
-                <ImageBrush ImageSource="back1.png"/>
+                <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="393,323,0,0" Click="button1_Click" Height="69" BorderThickness="0">
+        <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="91" Margin="393,323,0,2" Click="button1_Click" Height="Auto" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="next.png"/>
             </Button.Background>

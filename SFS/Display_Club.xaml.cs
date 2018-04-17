@@ -26,9 +26,52 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Search_club b = new Search_club();
-            b.Show();
+            if (textBox.Text == "")
+            {
+                MessageBox.Show("Please fill the required information");
+            }
+            else
+            {
+                List<string> cname = new List<string>();
+                List<string> sdate = new List<string>();
+
+                for (int i = 0; i < Containers.Club_list.Count; i++)
+                {
+                    if (textBox.Text == Containers.Club_list[i].getClubName())
+                    {
+                        cname.Add(Containers.Club_list[i].getClubName());
+                        sdate.Add(Containers.Club_list[i].getStartingDate());
+
+                    }
+                }
+                listBox.ItemsSource = cname;
+                listBox_Copy.ItemsSource = sdate;
+
+
+            }
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+
+            List<Team> tlist = new List<Team>();
+            List<Championships> chlist = new List<Championships>();
+            List<Sponsers> slist = new List<Sponsers>();
+            List<string> cname = new List<string>();
+            List<string> sdate = new List<string>();
+            for (int i = 0; i < Containers.Club_list.Count; i++)
+            {
+                
+                    cname.Add(Containers.Club_list[i].getClubName());
+                    sdate.Add(Containers.Club_list[i].getStartingDate());
+
+                
+            }
+            listBox.ItemsSource = cname;
+            listBox_Copy.ItemsSource = sdate;
+
 
         }
+
     }
 }

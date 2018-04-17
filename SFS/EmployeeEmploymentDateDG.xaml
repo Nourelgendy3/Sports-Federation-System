@@ -11,7 +11,7 @@
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
         <DataGrid x:Name="EmploymentDateDG" HorizontalAlignment="Left" Height="188" Margin="126,68,0,0" VerticalAlignment="Top" Width="218"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="97" Click="button_Click">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="97" Click="button_Click" Margin="0,247,0,0" RenderTransformOrigin="0.1,0.391">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>

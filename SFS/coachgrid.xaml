@@ -21,7 +21,8 @@
             </Button.Background>
         </Button>
         <Label x:Name="label" Content="Coach" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="87" Margin="188,63,0,0" FontSize="22" FontWeight="Bold" FontFamily="Traditional Arabic"/>
-        <DataGrid x:Name="coach" HorizontalAlignment="Left" VerticalAlignment="Top" Height="193" Width="281" Margin="104,105,0,0"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="100" Margin="137,118,0,0"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="100" Margin="236,118,0,0"/>
 
     </Grid>
 </Window>

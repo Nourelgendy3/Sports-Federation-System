@@ -62,7 +62,11 @@ namespace SFS
                 Edit_PlayerMediacalForm z = new Edit_PlayerMediacalForm();
                 z.Show();
             }
-            
+            else if (choose.Text == "Results")
+            {
+                Add_PlayerResults z = new Add_PlayerResults();
+                z.Show();
+            }
 
         }
 

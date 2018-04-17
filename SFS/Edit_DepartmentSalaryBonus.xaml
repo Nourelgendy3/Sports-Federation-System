@@ -14,14 +14,14 @@
         <TextBox x:Name="salary" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="152,124,0,0" TextChanged="textBox1_TextChanged"/>
         <Label x:Name="label2_Copy11" Content="Department:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,77,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
         <Label x:Name="label2_Copy" Content="Salary:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,111,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="332,282,0,0" Height="36" Click="button1_Click">
+        <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="394,258,0,0" Height="60" Click="button1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Edit2.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button_Copy" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Height="46" Margin="-2,272,0,0" Click="button_Copy_Click">
+        <Button x:Name="button_Copy" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Height="60" Margin="-2,258,0,0" Click="button_Copy_Click">
             <Button.Background>
-                <ImageBrush ImageSource="back1.png"/>
+                <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
 

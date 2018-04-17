@@ -55,9 +55,9 @@ namespace SFS
             {
                 if (Containers.Player_list[i].getmobile() == number.Text)
                     mobile = true;
-            } 
-           
-             if (Male.IsChecked == true)
+            }
+
+            if (Male.IsChecked == true)
                 gender = "Male";
             else gender = "Female";
 
@@ -65,24 +65,24 @@ namespace SFS
                 med = "YES";
             else
                 med = "NO";
-           
+
             if (Yes3.IsChecked == true)
                 avail = "Yes";
             else avail = "No";
 
-            if (Name.Text == "" || number.Text == "" || Salary.Text == "" || Emplyedate.Text == ""|| Date.Text==""|| Department.Text=="")
+            if (Name.Text == "" || number.Text == "" || Salary.Text == "" || Emplyedate.Text == "" || Date.Text == "" || Department.Text == "")
             {
                 MessageBox.Show("Please fill the required information !");
             }
-            else if((Male.IsChecked == true)&& (Female.IsChecked == true))
+            else if ((Male.IsChecked == true) && (Female.IsChecked == true))
                 MessageBox.Show("Please fill the required information !");
-           else if ((Yes.IsChecked == true) && (No.IsChecked == true))
+            else if ((Yes.IsChecked == true) && (No.IsChecked == true))
                 MessageBox.Show("Please fill the required information !");
             else if (mobile == true)
             {
                 MessageBox.Show("Mobile number is already registered !");
             }
-            else  if (!File.Exists("Employees.xml"))
+            else if (!File.Exists("Employees.xml"))
             {
                 XmlTextWriter document = new XmlTextWriter("Employees.xml", Encoding.UTF8);
 
@@ -97,7 +97,7 @@ namespace SFS
                 document.WriteStartElement("Employment_ID");
                 document.WriteString(id);
                 document.WriteEndElement();
-             
+
                 document.WriteStartElement("Mobile_Number");
                 document.WriteString(number.Text);
                 document.WriteEndElement();
@@ -214,6 +214,151 @@ namespace SFS
                 doc.Save("Employees.xml");
 
                 MessageBox.Show("Employee Successfuly Added.");
+            }
+            if (Department.Text == "Coach")
+            {
+                if (!File.Exists("Coaches.xml"))
+                {
+                    XmlTextWriter document = new XmlTextWriter("Coaches.xml", Encoding.UTF8);
+
+                    document.Formatting = Formatting.Indented;
+                    document.WriteStartDocument();
+                    document.WriteStartElement("Coaches");
+                    document.WriteStartElement("Coach");
+                    document.WriteStartElement("Coach_Name");
+                    document.WriteString(Name.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Coach_ID");
+                    document.WriteString(id);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Mobile_Number");
+                    document.WriteString(number.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Gender");
+                    document.WriteString(gender);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Medical_Form");
+                    document.WriteString(med);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Salary");
+                    document.WriteString(Salary.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Bonus");
+                    document.WriteString(bonus);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Employement_Date");
+                    document.WriteString(Emplyedate.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Working_Years");
+                    document.WriteString(working_years);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Date_of_birth");
+                    document.WriteString(Date.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Available");
+                    document.WriteString(avail);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Department");
+                    document.WriteString(Department.Text);
+                    document.WriteEndElement();
+
+                    document.WriteStartElement("Results");
+                    document.WriteString("0");
+                    document.WriteEndElement();
+
+
+                    document.WriteStartElement("Password");
+                    document.WriteString(password.Text);
+                    document.WriteEndElement();
+
+                    document.WriteEndElement();
+                    document.WriteEndElement();
+                    document.WriteEndDocument();
+
+                    document.Close();
+
+                    MessageBox.Show("Coach Successfuly Added.");
+                }
+                else
+
+                {
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load("Coaches.xml");
+
+                    XmlNode employee = doc.CreateElement("Coach");
+
+                    XmlNode Employee_Name = doc.CreateElement("Coach_Name");
+                    Employee_Name.InnerText = Name.Text;
+                    employee.AppendChild(Employee_Name);
+
+                    XmlNode Employee_ID = doc.CreateElement("Coach_ID");
+                    Employee_ID.InnerText = id;
+                    employee.AppendChild(Employee_ID);
+
+                    XmlNode MobileNum = doc.CreateElement("Mobile_Number");
+                    MobileNum.InnerText = number.Text;
+                    employee.AppendChild(MobileNum);
+
+                    XmlNode Genderr = doc.CreateElement("Gender");
+                    Genderr.InnerText = gender;
+                    employee.AppendChild(Genderr);
+
+                    XmlNode Medical = doc.CreateElement("Medical_Form");
+                    Medical.InnerText = med;
+                    employee.AppendChild(Medical);
+
+                    XmlNode salary = doc.CreateElement("Salary");
+                    salary.InnerText = Salary.Text;
+                    employee.AppendChild(salary);
+
+                    XmlNode b = doc.CreateElement("Bonus");
+                    b.InnerText = bonus;
+                    employee.AppendChild(b);
+
+                    XmlNode Employementdate = doc.CreateElement("Employement_Date");
+                    Employementdate.InnerText = Emplyedate.Text;
+                    employee.AppendChild(Employementdate);
+
+                    XmlNode workingyears = doc.CreateElement("Working_Years");
+                    workingyears.InnerText = working_years;
+                    employee.AppendChild(workingyears);
+
+                    XmlNode dateofbirth = doc.CreateElement("Date_of_birth");
+                    dateofbirth.InnerText = Date.Text;
+                    employee.AppendChild(dateofbirth);
+
+                    XmlNode avaliable = doc.CreateElement("Available");
+                    avaliable.InnerText = avail;
+                    employee.AppendChild(avaliable);
+
+                    XmlNode dep = doc.CreateElement("Department");
+                    dep.InnerText = Department.Text;
+                    employee.AppendChild(dep);
+
+                    XmlNode res = doc.CreateElement("Department");
+                    res.InnerText = "0";
+                    employee.AppendChild(res);
+
+                    XmlNode pas = doc.CreateElement("Password");
+                    pas.InnerText = password.Text;
+                    employee.AppendChild(pas);
+
+                    doc.DocumentElement.AppendChild(employee);
+                    doc.Save("Coaches.xml");
+
+                    MessageBox.Show("Coach Successfuly Added.");
+                }
             }
         }
 

@@ -28,13 +28,19 @@ namespace SFS
           Containers.Read_Employees();
           Containers.Read_Clubs();
           Containers.Read_Teams();
-          //  AGE a = new SFS.AGE();
-          //  a.Show();
-         //   mainqueryform f = new mainqueryform();
-         //   f.Show();
-          //  Options o = new Options();
-          //  o.Show();
-            
+           Containers.Read_Coach();
+            //  AGE a = new SFS.AGE();
+            //  a.Show();
+            //   mainqueryform f = new mainqueryform();
+            //   f.Show();
+            //  Options o = new Options();
+            //  o.Show();
+            TeamPlayers n = new TeamPlayers();
+            n.Show();
+            Display_Club z = new Display_Club();
+            z.Show();
+            Display_Coaches c = new Display_Coaches();
+            c.Show();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

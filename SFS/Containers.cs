@@ -19,7 +19,7 @@ namespace SFS
         public static List<Sponsers> Sponsor_list = new List<Sponsers>();
         public static List<Team> Team_list = new List<Team>();
         public static List<Championships> championship_list = new List<Championships>();
-
+        public static List<Coach> Coach_list = new List<Coach>();
 
         public static void Read_Players()
         {
@@ -100,6 +100,49 @@ namespace SFS
             w.Close();
         }
 
+        public static void Read_Coach()
+        {
+            Containers.Coach_list.Clear();
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Coaches.xml");
+            XmlNodeList list = doc.GetElementsByTagName("Coach");
+            FileStream w = new FileStream("Coaches.xml", FileMode.Open);
+            for (int i = 0; i < list.Count; i++)
+            {
+                XmlNodeList list_2 = list[i].ChildNodes;
+                string Name = list_2[0].Name;
+                string nvalue = list_2[0].InnerText;
+                string ID = list_2[1].Name;
+                string ivalue = list_2[1].InnerText;
+                string mobile_number = list_2[2].Name;
+                string mvalue = list_2[2].InnerText;
+                string gender = list_2[3].Name;
+                string gval = list_2[3].InnerText;
+                string medical_form = list_2[4].Name;
+                string medvalue = list_2[4].InnerText;
+                string salary = list_2[5].Name;
+                string sval = list_2[5].InnerText;
+                string bonus = list_2[6].Name;
+                string bval = list_2[6].InnerText;
+                string Employment_date = list_2[7].Name;
+                string edval = list_2[7].InnerText;
+                string Working_year = list_2[8].Name;
+                string wval = list_2[8].InnerText;
+                string date_of_birth = list_2[9].Name;
+                string dval = list_2[9].InnerText;
+                string available = list_2[10].Name;
+                string aval = list_2[10].InnerText;
+                string department = list_2[11].Name;
+                string depval = list_2[11].InnerText;
+                string results = list_2[12].Name;
+                string resval = list_2[12].InnerText;
+                string password = list_2[13].Name;
+                string pasval = list_2[13].InnerText;
+                Coach p = new Coach(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, int.Parse(wval), edval, aval, depval,0,"",int.Parse(resval),pasval);
+                Coach_list.Add(p);
+            }
+            w.Close();
+        }
         public static void Read_Clubs()
         {
             Containers.Club_list.Clear();
@@ -417,6 +460,150 @@ namespace SFS
 
                 doc.DocumentElement.AppendChild(employee);
                 doc.Save("Employees.xml");
+
+            }
+        }
+        public static void write_coach(Coach e)
+        {
+            if (!File.Exists("Coaches.xml"))
+            {
+                XmlTextWriter document = new XmlTextWriter("Coaches.xml", Encoding.UTF8);
+
+                document.Formatting = Formatting.Indented;
+                document.WriteStartDocument();
+                document.WriteStartElement("Coaches");
+                document.WriteStartElement("Coach");
+
+                document.WriteStartElement("Coach_Name");
+                document.WriteString(e.getName());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Coach_ID");
+                document.WriteString(e.getId().ToString());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Mobile_Number");
+                document.WriteString(e.getmobile());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Gender");
+                document.WriteString(e.getGender());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Medical_Form");
+                document.WriteString(e.getGender());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Salary");
+                document.WriteString(e.getSalary().ToString());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Bonus");
+                document.WriteString(e.getBonus().ToString());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Employement_Date");
+                document.WriteString(e.getEmployment_date());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Working_Years");
+                document.WriteString(e.getWorking_Year().ToString());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Date_of_birth");
+                document.WriteString(e.getDateOfBirth().ToString());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Available");
+                document.WriteString(e.GetStatus().ToString());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Department");
+                document.WriteString(e.GetDepartment());
+                document.WriteEndElement();
+
+
+                document.WriteStartElement("Results");
+                document.WriteString(e.getResult().ToString());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Password");
+                document.WriteString(e.Getpassword());
+                document.WriteEndElement();
+
+                document.WriteEndElement();
+                document.WriteEndElement();
+                document.WriteEndDocument();
+
+                document.Close();
+
+            }
+            else
+
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load("Coaches.xml");
+
+                XmlNode employee = doc.CreateElement("Coach");
+
+                XmlNode Employee_Name = doc.CreateElement("Coach_Name");
+                Employee_Name.InnerText = e.getName();
+                employee.AppendChild(Employee_Name);
+
+                XmlNode Employee_ID = doc.CreateElement("Coach_ID");
+                Employee_ID.InnerText = e.getId().ToString();
+                employee.AppendChild(Employee_ID);
+
+                XmlNode MobileNum = doc.CreateElement("Mobile_Number");
+                MobileNum.InnerText = e.getmobile();
+                employee.AppendChild(MobileNum);
+
+                XmlNode Genderr = doc.CreateElement("Gender");
+                Genderr.InnerText = e.getGender();
+                employee.AppendChild(Genderr);
+
+                XmlNode Medical = doc.CreateElement("Medical_Form");
+                Medical.InnerText = e.getMedicalReport().ToString();
+                employee.AppendChild(Medical);
+
+                XmlNode salary = doc.CreateElement("Salary");
+                salary.InnerText = e.getSalary().ToString();
+                employee.AppendChild(salary);
+
+                XmlNode b = doc.CreateElement("Bonus");
+                b.InnerText = e.getBonus().ToString();
+                employee.AppendChild(b);
+
+                XmlNode Employementdate = doc.CreateElement("Employement_Date");
+                Employementdate.InnerText = e.getEmployment_date();
+                employee.AppendChild(Employementdate);
+
+                XmlNode workingyears = doc.CreateElement("Working_Years");
+                workingyears.InnerText = e.getWorking_Year().ToString();
+                employee.AppendChild(workingyears);
+
+                XmlNode dateofbirth = doc.CreateElement("Date_of_birth");
+                dateofbirth.InnerText = e.getDateOfBirth().ToString();
+                employee.AppendChild(dateofbirth);
+
+                XmlNode avaliable = doc.CreateElement("Available");
+                avaliable.InnerText = e.GetStatus().ToString();
+                employee.AppendChild(avaliable);
+
+                XmlNode dep = doc.CreateElement("Department");
+                dep.InnerText = e.GetDepartment();
+                employee.AppendChild(dep);
+
+                XmlNode res = doc.CreateElement("Results");
+                res.InnerText = e.getResult().ToString();
+                employee.AppendChild(res);
+
+                XmlNode pas = doc.CreateElement("Password");
+                pas.InnerText = e.Getpassword();
+                employee.AppendChild(pas);
+
+                doc.DocumentElement.AppendChild(employee);
+                doc.Save("Coach.xml");
 
             }
         }

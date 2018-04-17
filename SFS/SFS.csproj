@@ -55,7 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Accounting.cs" />
     <Compile Include="AccountingOptionForm.xaml.cs">
       <DependentUpon>AccountingOptionForm.xaml</DependentUpon>
     </Compile>
@@ -177,6 +176,7 @@
     <Compile Include="getExpenseMonth.xaml.cs">
       <DependentUpon>getExpenseMonth.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Images\Accounting.cs" />
     <Compile Include="Loginas.xaml.cs">
       <DependentUpon>Loginas.xaml</DependentUpon>
     </Compile>
@@ -215,12 +215,6 @@
     <Compile Include="Search_Championship.xaml.cs">
       <DependentUpon>Search_Championship.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Search_club.xaml.cs">
-      <DependentUpon>Search_club.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Search_coach.xaml.cs">
-      <DependentUpon>Search_coach.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Search_Employee.xaml.cs">
       <DependentUpon>Search_Employee.xaml</DependentUpon>
     </Compile>
@@ -231,6 +225,9 @@
     <Compile Include="Team.cs" />
     <Compile Include="TeamChampionShipsQuery.xaml.cs">
       <DependentUpon>TeamChampionShipsQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeamPlayers.xaml.cs">
+      <DependentUpon>TeamPlayers.xaml</DependentUpon>
     </Compile>
     <Compile Include="typech.xaml.cs">
       <DependentUpon>typech.xaml</DependentUpon>
@@ -448,14 +445,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Search_club.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Search_coach.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Search_Employee.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -467,6 +456,10 @@
     <Page Include="TeamChampionShipsQuery.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TeamPlayers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="typech.xaml">
       <SubType>Designer</SubType>
@@ -561,6 +554,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="omar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="view.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

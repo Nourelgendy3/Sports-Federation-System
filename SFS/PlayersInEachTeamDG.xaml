@@ -10,8 +10,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <DataGrid x:Name="PlayersInEachTeamdataG" HorizontalAlignment="Left" Height="208" Margin="0,79,0,0" VerticalAlignment="Top" Width="314"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="91" Click="button_Click">
+        <DataGrid x:Name="PlayersInEachTeamdataG" HorizontalAlignment="Left" Height="208" Margin="35,34,0,0" VerticalAlignment="Top" Width="314"/>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="91" Click="button_Click" Margin="0,247,0,0">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
